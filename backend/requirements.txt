@@ -1,0 +1,10 @@
+
+flask-cors
+Flask
+Flask-Migrate==3.1.0
+bcrypt
+Flask
+requests
+
+
+
