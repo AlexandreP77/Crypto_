@@ -1,0 +1,8 @@
+2025-02-13 12:45:04 - Starting docker compose...
+2025-02-13 12:45:07 - Docker compose completed successfully.
+2025-02-13 12:45:14 - Executing docker exec...
+2025-02-13 12:45:14 - Creating hdfs cryptodata
+2025-02-13 12:45:15 - HDFS directory cryptodata have been created
+2025-02-13 12:45:15 - Creating hdfs ventes
+2025-02-13 12:45:17 - HDFS directory ventes have been created
+2025-02-13 12:45:17 - Script completed.
