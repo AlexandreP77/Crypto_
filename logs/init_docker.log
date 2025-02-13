@@ -6,3 +6,90 @@
 2025-02-13 12:45:15 - Creating hdfs ventes
 2025-02-13 12:45:17 - HDFS directory ventes have been created
 2025-02-13 12:45:17 - Script completed.
+2025-02-13 14:20:56 - Starting docker compose...
+2025-02-13 14:20:58 - Docker compose completed successfully.
+2025-02-13 14:21:05 - Executing docker exec...
+2025-02-13 14:21:05 - Creating hdfs cryptodata
+2025-02-13 14:21:07 - HDFS directory cryptodata have been created
+2025-02-13 14:21:07 - Creating hdfs ventes
+2025-02-13 14:21:09 - HDFS directory ventes have been created
+2025-02-13 14:21:09 - Transfer dataset (csv files)
+2025-02-13 14:21:10 - Docker exec failed with error code 255. Output: /myhadoop/data/*.csv: Unknown command
+Usage: hadoop fs [generic options]
+	[-appendToFile <localsrc> ... <dst>]
+	[-cat [-ignoreCrc] <src> ...]
+	[-checksum <src> ...]
+	[-chgrp [-R] GROUP PATH...]
+	[-chmod [-R] <MODE[,MODE]... | OCTALMODE> PATH...]
+	[-chown [-R] [OWNER][:[GROUP]] PATH...]
+	[-copyFromLocal [-f] [-p] [-l] [-d] [-t <thread count>] <localsrc> ... <dst>]
+	[-copyToLocal [-f] [-p] [-ignoreCrc] [-crc] <src> ... <localdst>]
+	[-count [-q] [-h] [-v] [-t [<storage type>]] [-u] [-x] [-e] <path> ...]
+	[-cp [-f] [-p | -p[topax]] [-d] <src> ... <dst>]
+	[-createSnapshot <snapshotDir> [<snapshotName>]]
+	[-deleteSnapshot <snapshotDir> <snapshotName>]
+	[-df [-h] [<path> ...]]
+	[-du [-s] [-h] [-v] [-x] <path> ...]
+	[-expunge [-immediate]]
+	[-find <path> ... <expression> ...]
+	[-get [-f] [-p] [-ignoreCrc] [-crc] <src> ... <localdst>]
+	[-getfacl [-R] <path>]
+	[-getfattr [-R] {-n name | -d} [-e en] <path>]
+	[-getmerge [-nl] [-skip-empty-file] <src> <localdst>]
+	[-head <file>]
+	[-help [cmd ...]]
+	[-ls [-C] [-d] [-h] [-q] [-R] [-t] [-S] [-r] [-u] [-e] [<path> ...]]
+	[-mkdir [-p] <path> ...]
+	[-moveFromLocal <localsrc> ... <dst>]
+	[-moveToLocal <src> <localdst>]
+	[-mv <src> ... <dst>]
+	[-put [-f] [-p] [-l] [-d] <localsrc> ... <dst>]
+	[-renameSnapshot <snapshotDir> <oldName> <newName>]
+	[-rm [-f] [-r|-R] [-skipTrash] [-safely] <src> ...]
+	[-rmdir [--ignore-fail-on-non-empty] <dir> ...]
+	[-setfacl [-R] [{-b|-k} {-m|-x <acl_spec>} <path>]|[--set <acl_spec> <path>]]
+	[-setfattr {-n name [-v value] | -x name} <path>]
+	[-setrep [-R] [-w] <rep> <path> ...]
+	[-stat [format] <path> ...]
+	[-tail [-f] [-s <sleep interval>] <file>]
+	[-test -[defswrz] <path>]
+	[-text [-ignoreCrc] <src> ...]
+	[-touch [-a] [-m] [-t TIMESTAMP ] [-c] <path> ...]
+	[-touchz <path> ...]
+	[-truncate [-w] <length> <path> ...]
+	[-usage [cmd ...]]
+
+Generic options supported are:
+-conf <configuration file>        specify an application configuration file
+-D <property=value>               define a value for a given property
+-fs <file:///|hdfs://namenode:port> specify default filesystem URL to use, overrides 'fs.defaultFS' property from configurations.
+-jt <local|resourcemanager:port>  specify a ResourceManager
+-files <file1,...>                specify a comma-separated list of files to be copied to the map reduce cluster
+-libjars <jar1,...>               specify a comma-separated list of jar files to be included in the classpath
+-archives <archive1,...>          specify a comma-separated list of archives to be unarchived on the compute machines
+
+The general command line syntax is:
+command [genericOptions] [commandOptions]
+
+2025-02-13 14:23:55 - Starting docker compose...
+2025-02-13 14:23:58 - Docker compose completed successfully.
+2025-02-13 14:24:05 - Executing docker exec...
+2025-02-13 14:24:05 - Creating hdfs cryptodata
+2025-02-13 14:24:07 - HDFS directory cryptodata have been created
+2025-02-13 14:24:07 - Creating hdfs ventes
+2025-02-13 14:24:08 - HDFS directory ventes have been created
+2025-02-13 14:24:08 - Transfer dataset (csv files)
+2025-02-13 14:24:11 - Docker exec failed with error code 1. Output: put: `/myhadoop/data/*.csv': No such file or directory
+2025-02-13 14:31:46 - Starting docker compose...
+2025-02-13 14:31:51 - Docker compose completed successfully.
+2025-02-13 14:31:58 - Executing docker exec...
+2025-02-13 14:31:58 - Creating hdfs cryptodata
+2025-02-13 14:31:59 - HDFS directory cryptodata have been created
+2025-02-13 14:31:59 - Creating hdfs ventes
+2025-02-13 14:32:01 - HDFS directory ventes have been created
+2025-02-13 14:32:01 - Transfer dataset (csv files)
+2025-02-13 14:32:23 - The crypto data csv files have been transferred successfully
+2025-02-13 14:32:23 - Transfer globales sells
+2025-02-13 14:32:24 - The globales csv file have been transfered successfully
+2025-02-13 14:32:24 - Docker exec have been done
+2025-02-13 14:32:24 - Script completed.

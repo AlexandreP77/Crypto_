@@ -40,7 +40,25 @@ else
 fi
 
 log "Transfer dataset (csv files)"
-docker_trans_file_result="$(sudo docker exec -it namenode hadoop fs)"
+docker_trans_file_result="$(sudo docker exec -it namenode bash -c 'find /myhadoop/data -name "*.csv" -exec hadoop fs -put {} /cryptodata/ \;')"
+ret_trans_file=$?
+if [ $ret_trans_file -eq 0 ]; then
+    log "The crypto data csv files have been transferred successfully"
+else 
+    log "Docker exec failed with error code $ret_trans_file. Output: $docker_trans_file_result"
+    exit $ret_trans_file
+fi
+
+log "Transfer globales sells"
+docker_trans_file_result2="$(sudo docker exec -it namenode hadoop fs -put /myhadoop/data/ventes/ventes_globales.csv /ventes/)"
+ret_trans_file2=$?
+if [ $ret_trans_file2 -eq 0 ]; then
+    log "The globales csv file have been transfered successfully"
+else 
+    log "Docker exec failed with error code $ret_trans_file2. Output: $docker_trans_file_result2"
+    exit $ret_trans_file2
+fi
+log "Docker exec have been done"
 
 log "Script completed."
 exit 0
