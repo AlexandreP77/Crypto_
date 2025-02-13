@@ -60,5 +60,43 @@ else
 fi
 log "Docker exec have been done"
 
+log "Submit spark scripts"
+log "Submit app.py"
+spark_script_app="$(sudo docker exec -it spark-master /spark/bin/spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.0.1 /app/app.py)"
+ret_script_spark=$?
+if [ $ret_script_spark -eq 0 ]; then
+    log "The script app.py have been submit to spark master"
+else
+    log "Error on the submit with the spark master: $spark_script_app. Exit with error $ret_script_spark"
+fi
+
+log "Submit process_sales.py"
+spark_script_process_sales="$(sudo docker exec -it spark-master /spark/bin/spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.0.1 /app/process_sales.py)"
+ret_script_spark2=$?
+if [ $ret_script_spark2 -eq 0 ]; then
+    log "The script app.py have been submit to spark master"
+else
+    log "Error on the submit with the spark master: $spark_script_process_sales. Exit with error $ret_script_spark2"
+fi
+
+log "Submit process_crypto.py"
+spark_script_process_crypto="$(sudo docker exec -it spark-master /spark/bin/spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.0.1 /app/process_crypto.py)"
+ret_script_spark3=$?
+if [ $ret_script_spark3 -eq 0 ]; then
+    log "The script app.py have been submit to spark master"
+else
+    log "Error on the submit with the spark master: $spark_script_process_crypto. Exit with error $ret_script_spark3"
+fi
+
+log "Executing script inside the docker"
+docker_trans_file_result2="$(sudo docker exec -it spark-master sh /app/update_data.sh)"
+ret_trans_file2=$?
+if [ $ret_trans_file2 -eq 0 ]; then
+    log "The script have been executed successfully"
+else 
+    log "Docker exec failed with error code $ret_trans_file2. Output: $docker_trans_file_result2"
+    exit $ret_trans_file2
+fi
+
 log "Script completed."
 exit 0

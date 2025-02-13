@@ -1,0 +1,21 @@
+2025-02-13 20:25:31 - Update apk
+2025-02-13 20:25:31 - Update successfull
+2025-02-13 20:25:31 - Adding tini openrc and busybox-initscripts
+2025-02-13 20:25:31 - Install successfull
+2025-02-13 20:30:55 - Updating APK packages
+2025-02-13 20:30:55 - Update successful
+2025-02-13 20:30:55 - Installing tini, openrc, and busybox-initscripts
+2025-02-13 20:30:55 - Installation successful
+2025-02-13 20:30:55 - Error: /app/update_data_by_hours.sh not found!
+2025-02-13 20:34:47 - Updating APK packages
+2025-02-13 20:34:47 - Update successful
+2025-02-13 20:34:47 - Installing tini, openrc, and busybox-initscripts
+2025-02-13 20:34:47 - Installation successful
+2025-02-13 20:34:47 - Scheduled script copied and permissions set
+2025-02-13 20:34:47 - Starting tini
+2025-02-13 20:40:04 - Updating APK packages
+2025-02-13 20:40:05 - Update successful
+2025-02-13 20:40:05 - Installing tini, openrc, and busybox-initscripts
+2025-02-13 20:40:06 - Installation successful
+2025-02-13 20:40:06 - Scheduled script copied and permissions set
+2025-02-13 20:40:06 - Starting cron service
