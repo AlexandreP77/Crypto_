@@ -1,0 +1,12 @@
+flask-cors
+Flask
+Flask-Migrate==3.1.0
+bcrypt
+scikit-learn
+requests
+kafka-python
+numpy
+
+
+
+
